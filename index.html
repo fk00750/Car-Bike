@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="Page-title" class="bounceInDown">
+        Car <br />
+        & <br />
+        Bike
+      </h1>
+    </header>
+    <!-- car and bike section  -->
+    <main>
+      <div class="container">
+        <!-- car -->
+        <div class="box1">
+          <div class="img-container1">
+            <img
+              src="images/car-1851299_1920.jpg"
+              id="car-img"
+              alt=""
+            />
+          </div>
+          <!-- buttons -->
+          <div class="buttons">
+            <button class="btn1">
+              <img
+                src="images/car.png"
+                alt="car"
+                class="carImage1"
+              />
+              <i class="arrow left"></i>
+            </button>
+            <button class="btn2">
+              <img
+                src="images/car.png"
+                alt="car"
+                class="carImage2"
+              />
+              <i class="arrow right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- bike -->
+        <div class="box2">
+          <div class="img-container2">
+            <img
+              src="images/motorcycle-6626809_1920.jpg"
+              id="bike-img"
+              alt=""
+            />
+          </div>
+
+          <!-- buttons -->
+          <div class="buttons">
+            <button class="btn1">
+              <img
+                src="images/motocross.png"
+                alt="car"
+                class="BikeImage1"
+              />
+              <i class="arrow left"></i>
+            </button>
+            <button class="btn2">
+              <img
+                src="images/motocross.png"
+                alt="car"
+                class="BikeImage2"
+              />
+              <i class="arrow right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- car and bike section  -->
+
+    <!-- modal window for car -->
+    <div class="Carmodal hidden">
+      <div class="center">
+        <div class="property-card-Car">
+          <a href="#">
+            <div id="property-image-Car">
+              <div class="property-image-title-Car">
+                <h5 id="CarTitle">Bentley continental</h5>
+              </div>
+            </div></a
+          >
+          <div class="property-description-Car">
+            <div class="parent">
+              <div class="divl">
+                <span>Engine</span>
+              </div>
+              <div class="divr">
+                <span class="txt engine">3497 cc</span>
+              </div>
+              <div class="divl">
+                <span>Top-Speed</span>
+              </div>
+              <div class="divr">
+                <span class="txt topspeed">348 kmph</span>
+              </div>
+              <div class="divl">
+                <span>Mileage</span>
+              </div>
+              <div class="divr">
+                <span class="txt mileage">15.0 kmpl</span>
+              </div>
+            </div>
+          </div>
+          <a href="#">
+            <div class="property-social-icons-Car">
+              &times;
+              <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="Caroverlay hidden"></div>
+    <!-- modal window -->
+
+    <!-- modal window for bike -->
+    <div class="Bikemodal hidden-bike">
+      <!-- <div class="center"> -->
+      <div class="property-card-Bike">
+        <a href="#">
+          <div id="property-image-Bike">
+            <div class="property-image-title-Bike">
+              <h5>Yamaha mt07</h5>
+            </div>
+          </div></a
+        >
+        <div class="property-description-Bike">
+          <div class="parent">
+            <div class="divl">
+              <span>Engine</span>
+            </div>
+            <div class="divr">
+              <span class="txt Bike_engine">689 cc</span>
+            </div>
+            <div class="divl">
+              <span>Top-Speed</span>
+            </div>
+            <div class="divr">
+              <span class="txt Bike_topspeed">214 kmph</span>
+            </div>
+            <div class="divl">
+              <span>Mileage</span>
+            </div>
+            <div class="divr">
+              <span class="txt Bike_mileage">24.2 kmpl</span>
+            </div>
+          </div>
+        </div>
+        <a href="#">
+          <div class="property-social-icons-Bike">
+            &times;
+            <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+          </div>
+        </a>
+      </div>
+      <!-- </div> -->
+    </div>
+    <div class="Bikeoverlay hidden-bike"></div>
+    <!-- modal window -->
+
+    <!-- script JavaScript  -->
+    <script src="script.js"></script>
+  </body>
+</html>

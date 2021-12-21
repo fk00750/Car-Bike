@@ -1,0 +1,705 @@
+
+
+:root {
+	/* dark shades of primary color*/
+	--clr-primary-1: hsl(205, 86%, 17%);
+	--clr-primary-2: hsl(205, 77%, 27%);
+	--clr-primary-3: hsl(205, 72%, 37%);
+	--clr-primary-4: hsl(205, 63%, 48%);
+	/* primary/main color */
+	--clr-primary-5: hsl(205, 78%, 60%);
+	/* lighter shades of primary color */
+	--clr-primary-6: hsl(205, 89%, 70%);
+	--clr-primary-7: hsl(205, 90%, 76%);
+	--clr-primary-8: hsl(205, 86%, 81%);
+	--clr-primary-9: hsl(205, 90%, 88%);
+	--clr-primary-10: hsl(205, 100%, 96%);
+	/* darkest grey - used for headings */
+	--clr-grey-1: hsl(209, 61%, 16%);
+	--clr-grey-2: hsl(211, 39%, 23%);
+	--clr-grey-3: hsl(209, 34%, 30%);
+	--clr-grey-4: hsl(209, 28%, 39%);
+	/* grey used for paragraphs */
+	--clr-grey-5: hsl(210, 22%, 49%);
+	--clr-grey-6: hsl(209, 23%, 60%);
+	--clr-grey-7: hsl(211, 27%, 70%);
+	--clr-grey-8: hsl(210, 31%, 80%);
+	--clr-grey-9: hsl(212, 33%, 89%);
+	--clr-grey-10: hsl(210, 36%, 96%);
+	--clr-white: #fff;
+	--clr-red-dark: hsl(360, 67%, 44%);
+	--clr-red-light: hsl(360, 71%, 66%);
+	--clr-green-dark: hsl(125, 67%, 44%);
+	--clr-green-light: hsl(125, 71%, 66%);
+	--clr-black: #222;
+	--ff-primary: "Roboto", sans-serif;
+	--ff-secondary: "Open Sans", sans-serif;
+	--transition: all 0.3s linear;
+	--spacing: 0.1rem;
+	--radius: 0.25rem;
+	--light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--max-width: 1170px;
+	--fixed-width: 620px;
+}
+
+html {
+	height: auto;
+}
+
+body {
+	background: url("images/parking-deck-gfd9184e72_1920.jpg") center center / cover no-repeat;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+header {
+	text-align: center;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 24px;
+	margin-top: 0.75rem;
+}
+
+.container {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.box1,
+.box2 {
+	width: 18.75rem;
+	height: 19.75rem;
+	/* border: 2px solid black;
+   */
+}
+
+
+/* box 1 image and box 2 image */
+
+.img-container1,
+.img-container2 {
+	position: relative;
+	top: 4.375rem;
+	width: 9.375rem;
+	height: 9.375rem;
+	border-radius: 50%;
+	margin: 0 auto;
+	margin-bottom: 1.5rem;
+	/* border: 2px solid green;
+   */
+}
+
+#car-img,
+#bike-img {
+	width: 100%;
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+	position: relative;
+}
+
+.prev-btn,
+.next-btn {
+	color: var(--clr-primary-7);
+	font-size: 1.25rem;
+	/* background: transparent;
+   */
+	/* border-color: transparent;
+   */
+	margin: 0 0.5rem;
+	transition: var(--transition);
+	cursor: pointer;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+	color: var(--clr-primary-5);
+}
+
+.random-btn {
+	margin-top: 0.5rem;
+	background: var(--clr-primary-10);
+	color: var(--clr-primary-5);
+	padding: 0.25rem 0.5rem;
+	text-transform: capitalize;
+	border-radius: var(--radius);
+	transition: var(--transition);
+	border-color: var(--clr-primary-5);
+	cursor: pointer;
+}
+
+.random-btn:hover {
+	background: var(--clr-primary-5);
+	color: var(--clr-primary-1);
+}
+
+
+/* Header Animation */
+
+.bounceInDown {
+	-webkit-animation-name: bounceInDown;
+	animation-name: bounceInDown;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+@-webkit-keyframes bounceInDown {
+	0%,
+	60%,
+	75%,
+	90%,
+	100% {
+		-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -3000px, 0);
+		transform: translate3d(0, -3000px, 0);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 25px, 0);
+		transform: translate3d(0, 25px, 0);
+	}
+	75% {
+		-webkit-transform: translate3d(0, -10px, 0);
+		transform: translate3d(0, -10px, 0);
+	}
+	90% {
+		-webkit-transform: translate3d(0, 5px, 0);
+		transform: translate3d(0, 5px, 0);
+	}
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+@keyframes bounceInDown {
+	0%,
+	60%,
+	75%,
+	90%,
+	100% {
+		-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -3000px, 0);
+		transform: translate3d(0, -3000px, 0);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 25px, 0);
+		transform: translate3d(0, 25px, 0);
+	}
+	75% {
+		-webkit-transform: translate3d(0, -10px, 0);
+		transform: translate3d(0, -10px, 0);
+	}
+	90% {
+		-webkit-transform: translate3d(0, 5px, 0);
+		transform: translate3d(0, 5px, 0);
+	}
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+
+/* Button styling */
+
+
+/* buttons */
+
+.buttons {
+	/* border: 2px solid black; */
+	margin-top: 80px;
+	/* text-align: center; */
+	display: flex;
+	justify-content: center;
+}
+
+.btn1,
+.btn2 {
+	border: none;
+	margin-right: 20px;
+	background: repeat-x;
+	/* border: 2px solid black; */
+	height: 85px;
+}
+
+.btn1:hover {
+	position: relative;
+	right: 10px;
+	cursor: pointer;
+}
+
+.btn2 {
+	margin: 0;
+}
+
+.btn2:hover {
+	position: relative;
+	left: 10px;
+}
+
+.carImage1 {
+	width: 50px;
+	transform: rotateY(180deg);
+}
+
+.carImage2 {
+	width: 50px;
+}
+
+.BikeImage1 {
+	width: 50px;
+	transform: rotateY(180deg);
+}
+
+.BikeImage2 {
+	width: 50px;
+}
+
+.arrow {
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	position: relative;
+	top: 15px;
+	right: 25px;
+}
+
+.left {
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+}
+
+.right {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+}
+
+
+/* Car Card styling */
+
+body {
+	background-color: #f2f2f2;
+	font-family: "RobotoDraft", "Roboto", sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h5 {
+	margin: 0px;
+	font-size: 1.4em;
+	font-weight: 700;
+}
+
+p {
+	font-size: 12px;
+}
+
+.center {
+	/* height: 100vh; */
+	/* width: 100%; */
+	/* display: flex; */
+	/* justify-content: center; */
+	/* align-items: center; */
+	/* End Non-Essential  */
+}
+
+.property-card-Car {
+	height: 18em;
+	width: 14em;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	position: relative;
+	-webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	border-radius: 16px;
+	overflow: hidden;
+	-webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+	box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+
+
+/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
+
+
+/* Top Half of card, image. */
+
+#property-image-Car {
+	height: 6em;
+	width: 14em;
+	padding: 1em 2em;
+	position: Absolute;
+	top: 0px;
+	-webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	background-image: url("images/car-1851299_1920.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+/* Bottom Card Section */
+
+.property-description-Car {
+	background-color: #fafafc;
+	height: 12em;
+	width: 14em;
+	position: absolute;
+	bottom: 0em;
+	-webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	padding: 0.5em 1em;
+	text-align: center;
+}
+
+
+/* Social Icons */
+
+.property-social-icons-Car {
+	/* width: 1em;
+    height: 1em; */
+	background-color: rgb(250, 250, 250);
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+	-webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+
+/* Property Cards Hover States */
+
+.property-card-Car:hover .property-description-Car {
+	height: 0em;
+	padding: 0px 1em;
+}
+
+.property-card-Car:hover #property-image-Car {
+	height: 18em;
+}
+
+.property-card-Car:hover .property-social-icons-Car {
+	background-color: #ffffff;
+}
+
+.property-card-Car:hover .property-social-icons-Car:hover {
+	background-color: #000000;
+	color: #fff;
+	cursor: pointer;
+}
+
+
+/* Optional */
+
+.property-image-title-Car {
+	text-align: center;
+	position: Relative;
+	top: 30%;
+	/* opacity:0; */
+	transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+	color: black;
+	/* font-size:1.2em; */
+	/* font-size: 1.0em; */
+	font-weight: 700;
+	/* border: 2px solid black; */
+	background: rgba(0, 0, 0, 0.45);
+	color: white;
+}
+
+#CarTitle {
+	color: white;
+	text-align: center;
+	font-size: 1.0em;
+}
+
+.property-card-Car:hover .property-image-title-Car {
+	opacity: 1;
+	position: relative;
+	top: 5px;
+}
+
+
+/* Bike Card styling */
+
+body {
+	background-color: #f2f2f2;
+	font-family: "RobotoDraft", "Roboto", sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h5 {
+	margin: 0px;
+	font-size: 1.4em;
+	font-weight: 700;
+}
+
+p {
+	font-size: 12px;
+}
+
+.center {
+	/* height: 100vh; */
+	/* width: 100%; */
+	/* display: flex; */
+	/* justify-content: center; */
+	/* align-items: center; */
+}
+
+
+/* End Non-Essential  */
+
+.property-card-Bike {
+	height: 18em;
+	width: 14em;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	position: relative;
+	-webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	border-radius: 16px;
+	overflow: hidden;
+	-webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+	box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+
+
+/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
+
+
+/* Top Half of card, image. */
+
+#property-image-Bike {
+	height: 6em;
+	width: 14em;
+	padding: 1em 2em;
+	position: Absolute;
+	top: 0px;
+	-webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	background-image: url("images/motorcycle-6626809_1920.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+/* Bottom Card Section */
+
+.property-description-Bike {
+	background-color: #fafafc;
+	height: 12em;
+	width: 14em;
+	position: absolute;
+	bottom: 0em;
+	-webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	padding: 0.5em 1em;
+	text-align: center;
+}
+
+
+/* Social Icons */
+
+.property-social-icons-Bike {
+	/* width: 1em;
+  height: 1em; */
+	background-color: #ffffff;
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+	-webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+
+/* Property Cards Hover States */
+
+.property-card-Bike:hover .property-description-Bike {
+	height: 0em;
+	padding: 0px 1em;
+}
+
+.property-card-Bike:hover #property-image-Bike {
+	height: 18em;
+}
+
+.property-card-Bike:hover .property-social-icons-Bike {
+	background-color: white;
+}
+
+.property-card-Bike:hover .property-social-icons-Bike:hover {
+	background-color: #000000;
+	color: #fff;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+
+/* image title  */
+
+.property-image-title-Bike {
+	text-align: center;
+	position: Relative;
+	top: 30%;
+	/* opacity:0; */
+	transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+	color: black;
+	/* font-size: 1.0em; */
+	font-weight: 700;
+	background: rgba(0, 0, 0, 0.45);
+	color: #ffffff;
+}
+
+h5 {
+	color: #ffffff;
+	text-align: center;
+	font-size: 1.0em;
+}
+
+.property-card-Bike:hover .property-image-title-Bike {
+	opacity: 1;
+	position: relative;
+	top: 5px;
+}
+
+
+/* Car modal window styling */
+
+
+/* modal window  */
+
+.divl,
+.divr {
+	/* border: 2px solid black; */
+	text-align: center;
+	padding: 5px;
+	font-family: "Fjalla One", sans-serif;
+	font-size: 14px;
+}
+
+.divl {
+	text-shadow: 2px 2px #a3a3a3;
+}
+
+.divr {
+	color: #4e4e4e;
+}
+
+.Carmodal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 6rem;
+	z-index: 10;
+}
+
+.Caroverlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(3px);
+	z-index: 5;
+}
+
+.hidden {
+	display: none;
+}
+
+
+/* Bike modal window styling */
+
+
+/* modal window  */
+
+.divl,
+.divr {
+	/* border: 2px solid black; */
+	text-align: center;
+	padding: 5px;
+	font-family: "Fjalla One", sans-serif;
+	font-size: 14px;
+}
+
+.divl {
+	text-shadow: 2px 2px #a3a3a3;
+}
+
+.divr {
+	color: #4e4e4e;
+}
+
+.Bikemodal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 6rem;
+	z-index: 10;
+}
+
+.Bikeoverlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(3px);
+	z-index: 5;
+}
+
+.hidden-bike {
+	display: none;
+}
